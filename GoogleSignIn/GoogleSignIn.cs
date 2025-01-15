@@ -55,6 +55,13 @@ namespace Google {
   }
 #endif
 
+    [RuntimeInitializeOnLoadMethod]
+    public static void InitializeInstance()
+    {
+      theInstance = null;
+      theConfiguration = null;
+    }
+
     private static GoogleSignIn theInstance = null;
     private static GoogleSignInConfiguration theConfiguration = null;
     private ISignInImpl impl;
