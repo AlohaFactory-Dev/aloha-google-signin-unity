@@ -167,6 +167,8 @@ namespace Google.Impl
         }
         finally
         {
+          httpListener.Stop();
+          httpListener.Close();
           Pending = false;
         }
       },taskScheduler);
